@@ -1,40 +1,51 @@
-window.onload = function(){
+<!DOCTYPE html>
+<html lang="en">
 
-const enter = document.getElementById("enterBtn");
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart AI City</title>
 
-const hero = document.querySelector(".hero");
+<link rel="stylesheet" href="style.css">
 
-const dash = document.getElementById("dashboard");
+</head>
 
+<body>
 
-enter.onclick = function(){
+<h1>🏙 SMART AI CITY</h1>
 
-hero.style.display = "none";
+<p class="subtitle">AI Powered City Dashboard</p>
 
-dash.classList.remove("hidden");
-dash.style.display = "block";
+<div class="dashboard">
 
-setTimeout(startEmergency,8000);
+<div class="card">
+<h2>🔥 Fire</h2>
+<p id="fireStatus" class="green">🟢 SAFE</p>
+</div>
 
-}
+<div class="card">
+<h2>🌊 Flood</h2>
+<p id="floodStatus" class="green">🟢 SAFE</p>
+</div>
 
+<div class="card">
+<h2>⚡ Power</h2>
+<p id="powerStatus" class="green">🟢 NORMAL</p>
+</div>
 
-function startEmergency(){
+<div class="card">
+<h2>💧 Water</h2>
+<p id="waterStatus" class="green">🟢 NORMAL</p>
+</div>
 
-document.getElementById("fireStatus").innerHTML="🔴 FIRE DETECTED";
-document.getElementById("fireStatus").className="red";
+</div>
 
-document.getElementById("floodStatus").innerHTML="🔴 FLOOD DETECTED";
-document.getElementById("floodStatus").className="red";
+<br><br>
 
-document.getElementById("powerStatus").innerHTML="🟠 POWER FAILURE";
-document.getElementById("powerStatus").className="orange";
+<button>🏠 HOUSE A</button>
 
-document.getElementById("waterStatus").innerHTML="🔴 WATER LEVEL HIGH";
-document.getElementById("waterStatus").className="red";
+<script src="script.js"></script>
 
-document.body.style.animation="flash .5s infinite";
+</body>
 
-}
-
-}
+</html>
